@@ -1,30 +1,30 @@
-#include <algorithm>
-#include <iostream>
-#include <math.h>
-#include <thread>
-#include <chrono>
-#include <iterator>
-#include <string>
-#include <stdlib.h>
-#include <stdio.h>
-#include <vector>
-#include <fstream>
-#include <sstream>
-#include <stdexcept>
-#include <cerrno>
-#include <cstring>
 #include <dirent.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
+#include <algorithm>
+#include <cerrno>
+#include <chrono>
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <iterator>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <thread>
+#include <vector>
 #include "constants.h"
-
 
 using namespace std;
 
-class ProcessParser{
-private:
+class ProcessParser {
+   private:
     std::ifstream stream;
-    public:
+
+   public:
     static string getCmd(string pid);
     static vector<string> getPidList();
     static std::string getVmSize(string pid);
@@ -40,8 +40,6 @@ private:
     static int getTotalNumberOfProcesses();
     static int getNumberOfRunningProcesses();
     static string getOSName();
-    static std::string PrintCpuStats(std::vector<std::string> values1, std::vector<std::string>values2);
+    static std::string PrintCpuStats(std::vector<std::string> values1, std::vector<std::string> values2);
     static bool isPidExisting(string pid);
 };
-
-// TODO: Define all of the above functions below:
