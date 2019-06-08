@@ -26,15 +26,15 @@ class Path {
         return "/status";
     }
     static string statPath() {
-        return "stat";
+        return "/stat";
     }
     static string upTimePath() {
         return "uptime";
     }
     static string memInfoPath() {
-        return "meminfo";
+        return "/meminfo";
     }
     static string versionPath() {
-        return "version";
+        return "/version";
     }
 };

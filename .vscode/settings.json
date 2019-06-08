@@ -85,7 +85,10 @@
     "*.tcc": "cpp",
     "clocale": "cpp",
     "fstream": "cpp",
-    "new": "cpp"
+    "new": "cpp",
+    "iomanip": "cpp",
+    "thread": "cpp",
+    "cerrno": "cpp"
   },
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}"
 }
