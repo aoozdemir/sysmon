@@ -17,6 +17,7 @@
 #include <thread>
 #include <vector>
 #include "constants.h"
+#include "util.h"
 
 using namespace std;
 
@@ -69,7 +70,7 @@ string ProcessParser::getVmSize(string pid) {
         if (line.compare(0, name.size(), name) == 0) {
             istringstream buf(line);
             istream_iterator<string> beg(buf), end;
-            vector<string> values<beg, end>;
+            vector<string> values(beg, end);
 
             result = (stof(values[1]) / float(1024));
             break;
@@ -101,7 +102,7 @@ string ProcessParser::getCpuPercent(string pid) {
     float up_time = ProcessParser::getSysUpTime();
     float freq = sysconf(_SC_CLK_TCK);
     float total_time = u_time + s_time + cu_time + cs_time;
-    float seconds = uptime - (start_time / freq);
+    float seconds = up_time - (start_time / freq);
 
     float result = 100.0 * ((total_time / freq) / seconds);
 
